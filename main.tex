@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{pythontex}
+
+\setpythontexworkingdir{.}
+
+\begin{document}
+
+\begin{pycode}
+from pylab import *
+from tikzplotlib import get_tikz_code
+\end{pycode}
+
+\begin{pycode}
+x = linspace(0, 10, 101)
+plot(x, sin(x))
+xlabel('$x$-axis')
+ylabel('$y$-axis')
+print(get_tikz_code())
+\end{pycode}
+
+\end{document}
